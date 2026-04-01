@@ -128,7 +128,7 @@ Run all cells in order. The Gradio interface will open automatically (or print a
 | Step | What happens |
 |---|---|
 | **1. PDF ingestion** | `pdfplumber` extracts text and tables page-by-page; output saved to `extracted_pdf_data.txt` |
-| **2. Chunking & embedding** | Text split with overlap; ~1 400 chunks embedded using MedCPT into a FAISS index |
+| **2. Chunking & embedding** | Text split with overlap; ~1,400 chunks embedded using MedCPT into a FAISS index |
 | **3. Model loading** | LLM loaded with 4-bit NF4 quantization; cross-encoder reranker and similarity model initialised |
 | **4. Query processing** | Top-k chunks retrieved from FAISS → reranked → passed as context to the LLM → answer streamed |
 | **5. Evaluation** | Response scored with ROUGE, BERTScore, semantic similarity, and LLM-as-a-judge (faithfulness, relevancy, context recall) |
